@@ -1,36 +1,42 @@
 # Isuess 
 ## Isuess usados en la segunda clase del curso 
 
-¿Para qué sirve?
-Se utiliza para organizar el desarrollo de un proyecto sin salir de GitHub. Sus usos principales son:
+Paso 1: Crear un Issue (La Tarea)
+El primer paso es registrar la tarea o el error que vas a resolver en tu repositorio.
 
-Reportar errores (Bug tracking): Si algo no funciona en el código, se abre un Issue describiendo el fallo, cómo replicarlo y qué debería pasar en su lugar.
+Entra a tu repositorio en GitHub y haz clic en la pestaña Issues (en la barra superior, al lado de Code).
 
-Proponer mejoras o funciones (Feature requests): Si quieres sugerir una nueva idea, un componente visual o un cambio en la lógica del proyecto, lo dejas por escrito ahí.
+Haz clic en el botón verde New issue (Nuevo issue).
 
-Organizar tareas (To-Do lists): Los desarrolladores los usan para dividir un proyecto grande en tareas más pequeñas y asignarlas a miembros específicos del equipo.
+Escribe un Título claro (por ejemplo: Diseñar el componente del Footer) y una Descripción breve de lo que necesitas hacer.
 
-Hacer preguntas: Sirve como un foro para discutir dudas sobre el diseño, la arquitectura o el funcionamiento del código.
+(Opcional) En el panel de la derecha, puedes asignarte la tarea en Assignees o ponerle una etiqueta en Labels (como enhancement o bug).
 
-¿Qué elementos incluye un Issue?
-Para que no sea solo un simple texto de chat, un Issue te permite:
+Haz clic en Submit new issue. ¡Listo! Tu tarea ya tiene un número (por ejemplo, #1).
 
-Asignar responsables (Assignees): Saber exactamente quién está trabajando en esa tarea.
+![alt text](image.png)
 
-Etiquetas (Labels): Clasificarlos por colores (por ejemplo: bug, enhancement, documentation, help wanted).
+Paso 2: Crear el Tablero Kanban (GitHub Project)
+Ahora vamos a crear la pizarra visual para organizar tus Issues.
 
-Hitos (Milestones): Asociar el Issue a un objetivo o fecha de entrega (por ejemplo: "Versión 1.0").
+En la barra superior de tu repositorio, haz clic en la pestaña Projects y luego en el botón New project.
 
-Vincular Código: Puedes conectar un Issue con un Pull Request. Así, cuando el código corregido se aprueba, el Issue se cierra automáticamente. 
-¡Claro! En GitHub, esa vista de tablero Kanban se maneja a través de una herramienta llamada GitHub Projects (Proyectos). Es la forma visual de organizar todos esos Issues de los que hablábamos, permitiéndote ver el estado de tu trabajo de un solo vistazo.
+GitHub te dará opciones; selecciona la plantilla Board (Tablero). Esta es la que viene con la estructura Kanban de tres columnas: Todo, In Progress y Done. Haz clic en Create.
 
-Imagínalo como una pizarra física llena de notas adhesivas (los Issues), dividida en columnas que representan las etapas de tu flujo de trabajo.
+Ponle un nombre a tu proyecto (por ejemplo: Desarrollo Fase 1).
 
-¿Cómo funciona el Kanban en GitHub?
-Por defecto, un tablero Kanban básico en GitHub se divide en tres columnas principales, aunque puedes personalizarlas como quieras:
+Para añadir el Issue que creaste en el Paso 1:
 
-Todo (Por hacer): Aquí caen todos los Issues nuevos, ideas de componentes, errores reportados o tareas pendientes que aún nadie ha empezado a programar.
+En la parte inferior de la columna Todo, haz clic en + Add item.
 
-In Progress (En progreso): Cuando empiezas a trabajar en una tarea, arrastras el Issue a esta columna. Así, todo el equipo sabe exactamente en qué estás enfocado en ese momento y se evitan duplicar esfuerzos.
+Escribe el símbolo # y selecciona el Issue que creaste. Automáticamente aparecerá como una tarjeta en esa columna.
+![alt text](image-1.png)
+Paso 3: Hacer cambios en Git y pasarlo a "Done" de forma automática
+La magia de GitHub es que puedes hacer que la tarjeta se mueva sola a la columna de terminados usando un comando especial en tu terminal al subir el código.
 
-Done (Hecho): Una vez que el código está listo, revisado y subido, el Issue se mueve aquí y se cierra. Ver cómo se llena esta columna da una gran satisfacción.
+Ve a tu entorno de desarrollo en tu computadora, crea una rama e implementa los cambios en tu código (por ejemplo, maquetar el Footer).
+
+Cuando termines, haz el git add y prepara tu git commit.
+
+El truco de automatización: En el mensaje de tu commit, usa la palabra clave close o fixes seguida del número de tu Issue. Por ejemplo:
+![alt text](image-2.png)
